@@ -32,8 +32,19 @@ angular.module('app1').controller('registerController',
   ['$scope', '$location', 'AuthService',
     function ($scope, $location) {
 
-      $scope.register = function () { }
 
+      $scope.register = function () {
+
+
+        $http({
+          url: "http://127.0.0.1:8080/CreateUser?email=" + $scope.registerForm.email + "&password=" + $scope.registerForm.password,
+          method: 'POST'
+        }).then(function onSuccess(response) {
+
+          $scope.registerUser = response;
+
+        })
+      };
 
 
     }]);

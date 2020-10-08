@@ -1,0 +1,33 @@
+<div>
+    <h1>Home Page</h1>
+
+</div>
+
+<div class="container">
+    <input type="file"><span><button ng-click="upload()">Upload</button></span>
+
+    <div>
+        <table class="table table-stripped">
+            <thead>
+                <tr>
+                    <td>Id</td>
+                    <td>Title</td>
+                    <td>Content</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="i in data">
+                    <td>{{i.userId}}</td>
+                    <td>{{i.title}}</td>
+                    <td>{{i.body}}</td>
+
+                </tr>
+            </tbody>
+
+
+
+
+        </table>
+    </div>
+
+</div>

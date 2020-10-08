@@ -9,23 +9,19 @@ myApp.config(['$routeProvider', '$locationProvider', function ($routeProvider, $
     $routeProvider.
         when('/login', {
             templateUrl: 'login.html',
-            controller: 'loginController',
-            access: { restricted: false }
+            controller: 'loginController'
+
         }).
-        when('/logout', {
-            templateUrl: 'logout.html',
-            controller: 'logoutController',
-            access: { restricted: true }
-        }).
+
         when('/home', {
             templateUrl: 'home.html',
-            controller: 'homeController',
-            access: { restricted: true }
+            controller: 'homeController'
+
         }).
         when('/register', {
             templateUrl: 'register.html',
-            controller: 'registerController',
-            access: { restricted: false }
+            controller: 'registerController'
+
         }).
         otherwise({
             redirectTo: '/login'
